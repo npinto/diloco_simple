@@ -9,7 +9,12 @@ The script uses the Mistral-7B tokenizer, which is now a gated model on Hugging 
 1. Create a Hugging Face account at https://huggingface.co/
 2. Request access to the model at https://huggingface.co/mistralai/Mistral-7B-v0.1
 3. Generate an access token at https://huggingface.co/settings/tokens
-4. Login using the Hugging Face CLI:
+4. Set your Hugging Face token:
+   ```bash
+   export HF_TOKEN=hf_YOUR_TOKEN_HERE
+   ```
+   
+   Alternatively, you can login using the Hugging Face CLI:
    ```bash
    huggingface-cli login
    # Enter your access token when prompted
@@ -42,6 +47,17 @@ uv pip install -r requirements.txt
 ```
 
 ## Start run
+
+By default, the script will try to log to Weights & Biases. To run in offline mode:
+
+```bash
+export WANDB_MODE=offline
+```
+
+If you want to use Weights & Biases logging, first login:
+```bash
+wandb login
+```
 
 ### 1 DiLoCo replica worker
 
