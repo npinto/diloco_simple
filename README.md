@@ -10,6 +10,24 @@ First install the dependencies :
 pip install -r requirements.txt
 ```
 
+### Using uv (recommended for isolated environment)
+
+To create a completely isolated environment using uv with a specific Python version:
+
+```bash
+# Install uv if not already installed
+pip install uv
+
+# Create a virtual environment with Python 3.12
+uv venv venv-py312 --python 3.12
+
+# Activate the virtual environment
+source venv-py312/bin/activate
+
+# Install all requirements
+uv pip install -r requirements.txt
+```
+
 ## Start run
 
 ### 1 DiLoCo replica worker
