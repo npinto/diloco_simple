@@ -2,6 +2,19 @@
 
 This repo contains a minimal reproducible torch example of the ["DiLoCo: Distributed Low-Communication Training of Language Models"](https://arxiv.org/abs/2311.08105) approach in 180 lines of code.
 
+## Prerequisites
+
+The script uses the Mistral-7B tokenizer, which is now a gated model on Hugging Face. You need to:
+
+1. Create a Hugging Face account at https://huggingface.co/
+2. Request access to the model at https://huggingface.co/mistralai/Mistral-7B-v0.1
+3. Generate an access token at https://huggingface.co/settings/tokens
+4. Login using the Hugging Face CLI:
+   ```bash
+   huggingface-cli login
+   # Enter your access token when prompted
+   ```
+
 ## How to run the code
 
 First install the dependencies :
