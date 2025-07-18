@@ -82,7 +82,7 @@ def main(
     )
 
     tokenizer = AutoTokenizer.from_pretrained(
-        "mistralai/Mistral-7B-v0.1", use_fast=False
+        "mistralai/Mistral-7B-v0.1", use_fast=True
     )
     tokenizer.pad_token = "</s>"  # Ensure pad token is set for models that need it
 
